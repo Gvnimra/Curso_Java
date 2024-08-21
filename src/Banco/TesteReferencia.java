@@ -5,17 +5,17 @@ package Banco;
 public class TesteReferencia {
     public static void main(String[] args) {
         Conta primeiraConta = new Conta();
-        primeiraConta.saldo = 300;
+        primeiraConta.depositar(300);
 
-        System.out.println("O saldo da primeira conta é: " + primeiraConta.saldo);
+        System.out.println("O saldo da primeira conta é: " + primeiraConta.getSaldo());
 
         Conta segundaConta = new Conta();
 
-        System.out.println("O saldo da segunda conta é: " + primeiraConta.saldo);
+        System.out.println("O saldo da segunda conta é: " + primeiraConta.getSaldo());
 
-        segundaConta.saldo += 100;
-        System.out.println("O saldo da segunda conta é: " + segundaConta.saldo);
-        System.out.println("O saldo da primeira conta é: " + primeiraConta.saldo);
+        segundaConta.depositar(100);
+        System.out.println("O saldo da segunda conta é: " + segundaConta.getSaldo());
+        System.out.println("O saldo da primeira conta é: " + primeiraConta.getSaldo());
 
         if( primeiraConta == segundaConta){
             System.out.println("São a mesma conta!");
